@@ -655,8 +655,8 @@ if(BUILD_CODE_COVERAGE)
   #
   # Coverage cleanup
   #
-  add_custom_target(coverage_cleanup
-    COMMAND find ${CMAKE_BINARY_DIR} -name *.gcda -delete
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    )
+  # add_custom_target(coverage_cleanup
+  #   COMMAND find ${CMAKE_BINARY_DIR} -name *.gcda -delete
+  #   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+  #   )
 endif()
