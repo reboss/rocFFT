@@ -634,10 +634,10 @@ if(BUILD_CODE_COVERAGE)
   add_custom_target(coverage_output
     DEPENDS coverage_analysis
     COMMAND mkdir -p lcoverage
-    COMMAND echo "\\#!/bin/bash" > llvm-gcov.sh
-    COMMAND echo "\\# THIS FILE HAS BEEN GENERATED" >> llvm-gcov.sh
-    COMMAND printf "exec /opt/rocm/llvm/bin/llvm-cov gcov $$\\@" >> llvm-gcov.sh
-    COMMAND chmod +x llvm-gcov.sh
+    COMMAND echo "\\#!/bin/bash" > ${CMAKE_BINARY_DIR}/llvm-gcov.sh
+    COMMAND echo "\\# THIS FILE HAS BEEN GENERATED" >> ${CMAKE_BINARY_DIR}/llvm-gcov.sh
+    COMMAND printf "exec /opt/rocm/llvm/bin/llvm-cov gcov $$\\@" >> ${CMAKE_BINARY_DIR}/llvm-gcov.sh
+    COMMAND chmod +x ${CMAKE_BINARY_DIR}/llvm-gcov.sh
     )
 
   #
